@@ -1,13 +1,19 @@
 
 import React from 'react';
 import './App.css';
-import Search from './components/Search';
+import Search from './components/search/Search';
 
 function App() {
+    const handleOnSearchChange=(searchData)=>{
+      console.log(searchData);
+    }
+
   return (
-    <div >
+    <div className='container' >
       
-      <Search/>
+      <Search 
+        onSearchChange = {handleOnSearchChange}
+      />
        
     </div>
   );
