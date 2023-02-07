@@ -1,5 +1,5 @@
-import './current-weather.css';
-import React from 'react';
+import "./current-weather.css";
+import React from "react";
 
 
 const CurrentWeather = ({data}) =>{
@@ -25,7 +25,7 @@ const CurrentWeather = ({data}) =>{
                     </div>
                     <div className="parameter-row">
                         <span className="parameter-label">Wind</span>
-                        <span className="parameter-value">${data.wind.speed}m/s</span>
+                        <span className="parameter-value">{data.wind.speed}m/s</span>
                     </div>
                     <div className="parameter-row">
                         <span className="parameter-label">Humidity</span>
