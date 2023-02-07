@@ -1,5 +1,7 @@
 .container{
+  width: 500px;
   max-width: 540px;
   margin: 50px auto;
+  overflow-x: none;
  
 }
