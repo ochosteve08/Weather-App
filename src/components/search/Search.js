@@ -29,7 +29,7 @@ const Search = ({ onSearchChange }) => {
   };
 
   return (
-    <AsyncPaginate
+    <AsyncPaginate className="search-paginate"
       placeholder="Search for cities"
       debounceTimeout={600}
       value={search}
