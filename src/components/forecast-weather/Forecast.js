@@ -6,7 +6,7 @@ import {
   AccordionItemHeading,
   AccordionItemPanel,
 } from "react-accessible-accordion";
-import "./forecast.css"
+import "./forecast.css";
 
 const WEEK_DAYS = [
   "Monday",
@@ -31,7 +31,7 @@ const Forecast = ({ data }) => {
       <h3 className="title">Daily Forecast</h3>
       <Accordion className="forecast" allowZeroExpanded>
         {data.list.splice(0, 7).map((item, index) => {
-          console.log(index);
+          console.log(item);
           return (
             <AccordionItem key={index}>
               <AccordionItemHeading>
@@ -53,7 +53,34 @@ const Forecast = ({ data }) => {
                   </div>
                 </AccordionItemButton>
               </AccordionItemHeading>
-              <AccordionItemPanel></AccordionItemPanel>
+              <AccordionItemPanel>
+                <div className="daily-details-grid">
+                  <div className="daily-details-grid-item">
+                    <label>Pressure:</label>
+                    <label>{item.main.pressure}hPa</label>
+                  </div>
+                  <div className="daily-details-grid-item">
+                    <label>Humidity:</label>
+                    <label>{item.main.humidity}%</label>
+                  </div>
+                  <div className="daily-details-grid-item">
+                    <label>Cloud:</label>
+                    <label>{item.clouds.all}%</label>
+                  </div>
+                  <div className="daily-details-grid-item">
+                    <label>Wind:</label>
+                    <label>{item.wind.speed}m/s</label>
+                  </div>
+                  <div className="daily-details-grid-item">
+                    <label>Sea-level:</label>
+                    <label>{item.main.sea_level}m</label>
+                  </div>
+                  <div className="daily-details-grid-item">
+                    <label>Feels like:</label>
+                    <label>{Math.round(item.main.feels_like)}°C</label>
+                  </div>
+                </div>
+              </AccordionItemPanel>
             </AccordionItem>
           );
         })}

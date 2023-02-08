@@ -33,7 +33,7 @@ function App() {
       });
   };
 
-  console.log(forecastWeather);
+  // console.log(forecastWeather);
 
   return (
     <div className="container">
