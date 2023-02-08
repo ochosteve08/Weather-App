@@ -24,14 +24,12 @@ const Forecast = ({ data }) => {
   const forecastDays = WEEK_DAYS.slice(dayInWeek, WEEK_DAYS.length).concat(
     WEEK_DAYS.slice(0, dayInWeek)
   );
-  //    console.log(forecastDays);
 
   return (
     <>
       <h3 className="title">Daily Forecast</h3>
       <Accordion className="forecast" allowZeroExpanded>
         {data.list.splice(0, 7).map((item, index) => {
-          console.log(item);
           return (
             <AccordionItem key={index}>
               <AccordionItemHeading>

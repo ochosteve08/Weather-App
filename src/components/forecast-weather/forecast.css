@@ -6,13 +6,12 @@
   animation: slide 10s both infinite linear;
 }
 
-@keyframes slide {
-  from {
-    transform: translateX(-100%);
-  }
-  to {
-    transform: translateX(100%);
-  }
+
+
+@keyframes slide{
+    from {transform: translateX(-100%)}
+    to {transform: translateX(200%)}
+
 }
 
 .daily-item {
