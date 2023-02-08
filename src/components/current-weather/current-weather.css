@@ -23,13 +23,6 @@
   letter-spacing: 1px;
 }
 
-<<<<<<< HEAD
-.weather-description {
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 1;
-  margin: 0;
-=======
 .weather-description{
     font-weight: 400;
     font-size: 14px;
@@ -37,7 +30,6 @@
     margin-top: 4px;
     color: red;
 
->>>>>>> e1f97fefdad3d2815cc2e349c0713150aebef0cb
 }
 
 .weather-icon {
