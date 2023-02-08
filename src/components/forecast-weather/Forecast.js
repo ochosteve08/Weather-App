@@ -6,6 +6,7 @@ import {
   AccordionItemHeading,
   AccordionItemPanel,
 } from "react-accessible-accordion";
+import "./forecast.css";
 
 const WEEK_DAYS = [
   "Monday",
@@ -28,9 +29,13 @@ const Forecast = ({ data }) => {
   return (
     <>
       <h3 className="title">Daily Forecast</h3>
+<<<<<<< HEAD
       <Accordion allowZeroExpanded>
+=======
+      <Accordion className="forecast" allowZeroExpanded>
+>>>>>>> e1f97fefdad3d2815cc2e349c0713150aebef0cb
         {data.list.splice(0, 7).map((item, index) => {
-          console.log(index);
+          console.log(item);
           return (
             <AccordionItem key={index}>
               <AccordionItemHeading>
@@ -53,9 +58,38 @@ const Forecast = ({ data }) => {
                 </AccordionItemButton>
               </AccordionItemHeading>
               <AccordionItemPanel>
+<<<<<<< HEAD
                   <div className="daily-detail-grid-item">
 
                   </div>
+=======
+                <div className="daily-details-grid">
+                  <div className="daily-details-grid-item">
+                    <label>Pressure:</label>
+                    <label>{item.main.pressure}hPa</label>
+                  </div>
+                  <div className="daily-details-grid-item">
+                    <label>Humidity:</label>
+                    <label>{item.main.humidity}%</label>
+                  </div>
+                  <div className="daily-details-grid-item">
+                    <label>Cloud:</label>
+                    <label>{item.clouds.all}%</label>
+                  </div>
+                  <div className="daily-details-grid-item">
+                    <label>Wind:</label>
+                    <label>{item.wind.speed}m/s</label>
+                  </div>
+                  <div className="daily-details-grid-item">
+                    <label>Sea-level:</label>
+                    <label>{item.main.sea_level}m</label>
+                  </div>
+                  <div className="daily-details-grid-item">
+                    <label>Feels like:</label>
+                    <label>{Math.round(item.main.feels_like)}°C</label>
+                  </div>
+                </div>
+>>>>>>> e1f97fefdad3d2815cc2e349c0713150aebef0cb
               </AccordionItemPanel>
             </AccordionItem>
           );
