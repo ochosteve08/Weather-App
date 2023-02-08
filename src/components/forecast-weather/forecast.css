@@ -13,8 +13,8 @@
 
 
 @keyframes slide{
-    from {transform: translateX(-300px)}
-    to {transform: translateX(1400px)}
+    from {transform: translateX(-100%)}
+    to {transform: translateX(200%)}
 }
 
 .daily-item{
